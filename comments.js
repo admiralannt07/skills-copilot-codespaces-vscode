@@ -4,12 +4,12 @@
 // When a post request is made to /comments, add the comment to the comments array
 // Send back a 201 status code and a success message
 
-const express = require('express');
+import express from 'express';
 const app = express();
-const bodyParser = require('body-parser');
+import { json } from 'body-parser';
 const port = 3000;
 
-app.use(bodyParser.json());
+app.use(json());
 
 const comments = [];
 
